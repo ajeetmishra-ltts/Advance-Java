@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Player Registration</title>
+</head>
+<body>
+<form action="./InsertPlayerServlet" method="post">
+Player Id: <input type="number" name="pno"> <br><br>
+Player Name: <input type="text" name="pname"> <br><br>
+Date Of Birth : <input type="date" id="date" name="date" Placeholder="YYYY-MM-DD"><br><br>
+Player Country : <select name="fcountry" id="fcountry" style="width: 205px;height: 22px;">
+        <option value="India">India</option>
+        <option value="USA">USA</option>
+        <option value="Germany">Germany</option>
+        <option value="France">France</option>
+        <option value="Japan">Japan</option>
+        <option value="Taiwan">Taiwan</option>
+        <option value="Korea">Korea</option>
+      </select><br><br>
+
+Skills : <input type="checkbox" id="Batting" name="Batting" value="Batting">Batting
+    
+Runs : <input type="number" id="runs" name="runs" placeholder = "Total Runs"> <br><br>
+Wickets : <input type="number" id="wickets" name="wickets" placeholder = "Wickets"><br><br>
+No of matches : <input type="number" id="Matches" name="Matches" placeholder = "Matches"><br><br>
+Team ID : <input type="number" id="teamid" name="teamid" placeholder = "teamid"><br><br>
+
+
+
+
+
+<input type="submit" value="Add Player">
+
+</form>
+</body>
+</html>
