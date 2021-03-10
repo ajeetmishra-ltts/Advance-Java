@@ -5,7 +5,6 @@ import java.sql.Date;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -56,22 +55,25 @@ public class PlayerDao {
 		}
 	}
 
-	
-	
-	public List<Player> getAllPlayers1() throws Exception{
-		List<Player> li=new ArrayList<Player>();
-		Connection mc=MyConnection.getConnection(); // TRanfers control to another 
-		Statement ps=mc.createStatement();
-		ResultSet rs=ps.executeQuery("select * from player");
-	
-		//Player p=new Player();
-		while(rs.next()) {
-			li.add(new Player(rs.getInt(1),rs.getString(2),rs.getInt(3), rs.getString(4),rs.getString(5), rs.getInt(6),rs.getInt(7),rs.getInt(8),rs.getInt(9)));
+	public boolean updatePlayer(int id,String name) throws Exception
+	{
+		Connection c= MyConnection.getConnection();
+		PreparedStatement ps= c.prepareStatement("UPDATE player SET playername=? WHERE player_id=?");
+		ps.setString(1, name);
+		ps.setInt(2, id);
+		return ps.execute();
+	}
+	public void showPlayer() throws Exception
+	{
+		Connection c= MyConnection.getConnection();
+		PreparedStatement ps=c.prepareStatement("Select * from player;");
+		ps.execute();
+		ResultSet rs=ps.executeQuery();
+		while(rs.next())
+		{
+			System.out.println(rs.getInt(1)+" "+rs.getString(2)+" "+rs.getDate(3)+" "+rs.getString(4)+" "+rs.getString(5)+" "+rs.getInt(6)+" "+rs.getInt(7)+" "+rs.getInt(8)+" "+rs.getInt(9));
 			
 		}
-		return li;
-		
-	
 	}
 
 }
