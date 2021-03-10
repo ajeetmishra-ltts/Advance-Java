@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="Advance-Java">
-        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Servletproject/Advance-Java/Servletproject/Web/src"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Servletproject/Web/src"/>
-        <property name="context-root" value="Advance-Java"/>
-        <property name="java-output-path" value="/Advance-Java/Servletproject/Web/build/classes"/>
-    </wb-module>
-</project-modules>
