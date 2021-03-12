@@ -45,7 +45,7 @@ for(Player p:li){
 
 <td><%=p.getNumber_of_matches() %></td>
 <td><%=p.getTeam_id() %></td>
-
+<td><a href="UpdatePlayer.jsp?id=<%=p.getPlayer_id()%>"><button>UPDATE</button></a></td>
 </tr>
 <%} %>
 </table>
